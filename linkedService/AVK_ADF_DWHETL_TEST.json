@@ -1,0 +1,10 @@
+{
+	"name": "AVK_ADF_DWHETL_TEST",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://AzureKeyVaultForDWETL.vault.azure.net/"
+		}
+	}
+}
