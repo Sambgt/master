@@ -1,0 +1,17 @@
+{
+	"name": "AzureBlobStorage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AVK_ADF_DWHETL_TEST",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "ETLABS"
+			}
+		}
+	}
+}
