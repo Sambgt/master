@@ -17,11 +17,7 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DS_csv",
-						"type": "DatasetReference",
-						"parameters": {
-							"Container": "Incoming",
-							"Files": "*.csv"
-						}
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"exists",
@@ -72,6 +68,14 @@
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
 										"recursive": true,
+										"wildcardFolderPath": {
+											"value": "@pipeline().globalParameters.Incoming",
+											"type": "Expression"
+										},
+										"wildcardFileName": {
+											"value": "@item().itemName",
+											"type": "Expression"
+										},
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
@@ -162,11 +166,7 @@
 							"inputs": [
 								{
 									"referenceName": "DS_csv",
-									"type": "DatasetReference",
-									"parameters": {
-										"Container": "Incoming",
-										"Files": "NBN-202004.csv"
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
