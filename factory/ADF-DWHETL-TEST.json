@@ -1,0 +1,12 @@
+{
+	"name": "ADF-DWHETL-TEST",
+	"properties": {
+		"globalParameters": {
+			"Incoming": {
+				"type": "string",
+				"value": "Incoming/"
+			}
+		}
+	},
+	"location": "centralus"
+}
