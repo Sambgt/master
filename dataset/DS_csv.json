@@ -20,7 +20,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "NBN-202004.csv",
 				"container": "incoming"
 			},
 			"columnDelimiter": ",",
