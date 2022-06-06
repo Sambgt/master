@@ -1,0 +1,24 @@
+{
+	"name": "AzureSqlDatabase",
+	"properties": {
+		"parameters": {
+			"DatabaseName": {
+				"type": "string",
+				"defaultValue": "WideWorldImporters"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=shaibgt-pc.database.windows.net;Initial Catalog=WideWorldImporters;User ID=amdin-pc",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AVK_ADF_DWHETL_TEST",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "AKV-WWImporter"
+			}
+		}
+	}
+}
