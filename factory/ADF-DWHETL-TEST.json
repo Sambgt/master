@@ -5,6 +5,10 @@
 			"Incoming": {
 				"type": "string",
 				"value": "Incoming/"
+			},
+			"DWETL": {
+				"type": "string",
+				"value": "WideWorldImporters"
 			}
 		}
 	},
