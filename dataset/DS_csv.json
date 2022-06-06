@@ -1,0 +1,54 @@
+{
+	"name": "DS_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Container": {
+				"type": "string",
+				"defaultValue": "Incoming"
+			},
+			"Files": {
+				"type": "string",
+				"defaultValue": "NBN-202004.csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "NBN-202004.csv",
+				"container": "incoming"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SalesMonth",
+				"type": "String"
+			},
+			{
+				"name": "Retailer",
+				"type": "String"
+			},
+			{
+				"name": "Product",
+				"type": "String"
+			},
+			{
+				"name": "SalesValueUSD",
+				"type": "String"
+			},
+			{
+				"name": "UnitsSold",
+				"type": "String"
+			}
+		]
+	}
+}
